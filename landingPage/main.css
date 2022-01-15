@@ -1,4 +1,8 @@
+body{margin: 0; overflow: hidden;}
+
 .main{
+    padding: 2%;
+    background-color: #333;
     /* 
     lmao you fucked yourself with the transform strat, if you want to add more than 
     the screen width you'll have to change your vertical centering technique
