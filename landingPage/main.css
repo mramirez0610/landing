@@ -3,6 +3,7 @@ body {margin: 0; overflow: hidden;}
 .main{
     padding: 2%;
     background-color: #333;
+    border-radius: 40px;
     /* 
     lmao you fucked yourself with the transform strat, if you want to add more than 
     the screen width you'll have to change your vertical centering approach
@@ -19,6 +20,7 @@ body {margin: 0; overflow: hidden;}
 .navItem{
     margin: 20px auto 20px;
     padding: 1em 8em 1em 8em;
+    border-radius: 90px;
 }
 
 .animation{
