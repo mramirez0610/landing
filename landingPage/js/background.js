@@ -1,30 +1,63 @@
-function setup(){
+let mainArray = [];
+let count = 15;
+
+function setup() {
     createCanvas(windowWidth, windowHeight);
-    background('#999');
+    noStroke();
+    frameRate(60);
+
+    for (let y = 0; y < count; y++) {
+        mainArray[y] = new coolCircle();
+    }
 }
 
-var xPos = 50;
-function draw()
-{
-    superCool(50, 20);
-    superCool(100, 40);
-    superCool(250, 15);
+function draw() {
+    background(100);
+    circleSetup(); 
 }
 
-function superCool(yPos, cSize)
-{
-    for (i = 0; i < 5; i++)
-    {
-        
-        circle(xPos * i - 600, yPos * i - 250, cSize);
-        xPos++;
-        if( xPos > 900 )
-        {
-            xPos = -300;
+function circleSetup() {
+    const junk = [ "#BFC3BA", "#A9ACA9", "#60495A", "#3F3244", "#2F2235" ];
+    const colorList = [...junk, ...junk, ...junk];
+
+    //creates a circle for every entry in the array
+    for (var q = 0; q < colorList.length; q++) {
+        var curColor = color(colorList[q]);
+        curColor.setAlpha(220);
+        fill(curColor);
+
+        mainArray[q].create();
+        mainArray[q].float();
+        mainArray[q].rules();
+    }
+}
+
+class coolCircle {
+    constructor() {
+        this.d = random(40, 200);
+        this.x = random(0, windowWidth);
+        this.y = random(0, windowHeight);
+        this.speed = 0;
+    }
+
+    //this looks fucking gross, but it works! doesnt let it go too fast
+    float() {
+        if (this.speed <= 15) {
+            this.y += this.speed;
+            this.speed -= this.d / 20000;
         }
-        fill( Math.random() * 255, Math.random() * 255, Math.random() * 255);
-        //no stroke looks 1000x better
-        noStroke();
+        if (this.speed <= -15) {
+            this.y += this.speed
+            this.speed += 20;
+        }
+    }
+    rules() {
+        if (this.y < -200) {
+            this.y = height + 100;
+        }
+    }
+    create() {
+        circle(this.x, this.y, this.d);
     }
 }
 
