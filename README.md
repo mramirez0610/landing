@@ -1,6 +1,4 @@
-# marco ramirez landing page
-
-hello!!
+# hello !!!
 
 i created this using p5.js -- i didn't want to use carrd
 
