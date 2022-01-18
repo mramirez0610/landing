@@ -14,7 +14,7 @@ function setup() {
 }
 
 function draw() {
-    background(160);
+    background("#FFFCF5");
     circleSetup(); 
 }
 
@@ -51,11 +51,12 @@ class coolCircle {
         if (this.speed <= 15) {
             this.y += this.speed;
             this.x += this.speed / 3;
-            this.speed -= this.d / 20000;
+            this.speed -= this.d / 30000;
         }
+        //caps it out at requested speed
         if (this.speed <= -15) {
-            this.y += this.speed;
-            this.speed += 20;
+            this.speed += this.d / 30000;
+            console.log(this.speed);
         }
     }
     rules() {

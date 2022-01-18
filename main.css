@@ -25,4 +25,9 @@ body {margin: 0; overflow: hidden;}
 
 .animation{
     background-color: #ababab;
+    transition: 0.2s;
+}
+
+.animation:hover{
+    transform: scale(1.03, 1.05);
 }
