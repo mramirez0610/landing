@@ -1,5 +1,13 @@
 body {margin: 0; overflow: hidden;}
 
+a:link{
+    color: #111;
+}
+
+a:visited{
+    color: #333;
+}
+
 .main{
     padding: 2%;
     background-color: #deddd9;
