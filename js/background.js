@@ -5,6 +5,7 @@ var xoff2 = 1000000;
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
+    pixelDensity(1);
     noStroke();
     frameRate(60);
 
