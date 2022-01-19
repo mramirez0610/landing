@@ -54,9 +54,9 @@ class coolCircle {
             this.speed -= this.d / 20000;
         }
         //caps it out at requested speed
-        if (this.speed <= -8) {
+        if (this.speed <= -5) {
             this.speed += this.d / 20000;
-            
+            console.log(this.speed)
         }
     }
     rules() {
