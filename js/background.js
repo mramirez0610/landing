@@ -26,7 +26,7 @@ function circleSetup() {
     //creates a circle for every entry in the array
     for (var q = 0; q < colorList.length; q++) {
         var curColor = color(colorList[q]);
-        curColor.setAlpha(200);
+        curColor.setAlpha(190);
         fill(curColor);
 
         mainArray[q].create();
@@ -37,24 +37,23 @@ function circleSetup() {
 
 class coolCircle {
     constructor() {
-        this.d = random(40, 250);
+        this.d = random(60, 250);
         //literally just found out about the noise function this is fucking cool
-        this.x = map(noise(xoff1), 0, 1, 10, width)
-        this.y = map(noise(xoff2), 0, 1, 10, height) 
-        xoff1 += 1;
+        this.x = map(noise(xoff1), 0, 1, 20, width)
+        this.y = map(noise(xoff2), 0, 1, 15, height) 
+        xoff1 += 0.5;
         xoff2 += 50;
         this.speed = 0;
     }
-    
     //this looks fucking gross, but it works! doesnt let it go too fast
     float() {
         if (this.speed <= 15) {
             this.y += this.speed;
-            this.x += this.speed / 3;
+            this.x += this.speed / 2;
             this.speed -= this.d / 30000;
         }
         //caps it out at requested speed
-        if (this.speed <= -15) {
+        if (this.speed <= -8) {
             this.speed += this.d / 30000;
             console.log(this.speed);
         }
@@ -64,7 +63,7 @@ class coolCircle {
             this.y = height + 100;
         }
         if (this.x < - 200){
-            this.x = width + 100;
+            this.x = width + 150;
         }
     }
     create() {
