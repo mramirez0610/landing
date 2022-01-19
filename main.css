@@ -4,7 +4,7 @@ body {margin: 0; overflow: hidden;}
     padding: 2%;
     background-color: #deddd9;
     border-radius: 40px;
-    opacity: 85%;
+    opacity: 90%;
     /* 
     lmao you fucked yourself with the transform strat, if you want to add more than 
     the screen width you'll have to change your vertical centering approach
@@ -33,4 +33,8 @@ body {margin: 0; overflow: hidden;}
 
 .navItem:hover{
     transform: scale(1.03, 1.05);
+}
+
+.silly{
+    padding-top: 1.5%;
 }
