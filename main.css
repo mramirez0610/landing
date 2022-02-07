@@ -1,22 +1,17 @@
 body {margin: 0; overflow: hidden;}
 
-a:link{
-    color: #111;
-}
+a:link {color: #111;}
 
-a:visited{
-    color: #333;
-}
+a:visited {color: #333;}
+
+.name {padding-top: .5vh;}
 
 .main{
     padding: 2%;
     background-color: #deddd9;
     border-radius: 40px;
     opacity: 90%;
-    /* 
-    lmao you fucked yourself with the transform strat, if you want to add more than 
-    the screen width you'll have to change your vertical centering approach
-    */
+    
     top: 50%;
     left: 50%;
     position: absolute;
@@ -34,15 +29,39 @@ a:visited{
     border-radius: 90px;
 }
 
-.animation{
+.navItem:hover {transform: scale(1.03, 1.05);}
+
+.navAni{
     background-color: #F3E9E9;
     transition: 0.2s;
 }
 
-.navItem:hover{
-    transform: scale(1.03, 1.05);
+.header{
+    position: absolute;
+    width: 100%;
+    height: 3vh;
 }
 
-.silly{
-    padding-top: 1.5%;
+.setting{
+    width: 3vh;
+    height: 3vh;
+    transition: 1s;
+}
+
+.setting:hover {transform: rotate(90deg);}
+
+.noModal {display: none;}
+
+.modal{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+
+    height: 10%;
+    width: 10%;
+    border-radius: 40px;
+    align-self: center;
+    background-color: #333;
+    
 }
