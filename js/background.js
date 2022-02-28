@@ -22,11 +22,18 @@ function draw() {
 function showModal(){
     const modal = document.getElementById("modal");
 
+
     if (modal.className === "noModal") {
         modal.className = "modal";
     } else {
         modal.className = "noModal";
     }
+}
+
+function colorTest(event){
+    const colorSet = event.target.dataset.colorSet;
+    
+    console.log(colorSet)
 }
 
 function circleSetup() {

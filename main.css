@@ -6,6 +6,12 @@ a:visited {color: #333;}
 
 .name {padding-top: .5vh;}
 
+.header{
+    position: absolute;
+    width: 100%;
+    height: 3vh;
+}
+
 .main{
     padding: 2%;
     background-color: #deddd9;
@@ -36,12 +42,6 @@ a:visited {color: #333;}
     transition: 0.2s;
 }
 
-.header{
-    position: absolute;
-    width: 100%;
-    height: 3vh;
-}
-
 .setting{
     width: 3vh;
     height: 3vh;
@@ -58,11 +58,10 @@ a:visited {color: #333;}
     position: absolute;
     transform: translateX(-50%) translateY(-50%);
 
-    height: 10%;
-    width: 10%;
+    width: max-content;
+    height: max-content;
     border-radius: 40px;
     
     text-align: center;
     background-color: #999;
-    
 }
