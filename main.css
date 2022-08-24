@@ -1,10 +1,16 @@
-body {margin: 0; overflow: hidden;}
+/*
+---- Table of Contents ----
 
-a:link {color: #111;}
+    1. Header CSS
+    2. Body Styling
+    3. Links Styling
+    4. Modal Styling
 
-a:visited {color: #333;}
+*/
 
-.name {padding-top: .5vh;}
+body {margin: 0; overflow: hidden; font-family: 'Nunito', sans-serif;}
+
+/* -- 1. Header CSS -- */
 
 .header{
     position: absolute;
@@ -12,56 +18,89 @@ a:visited {color: #333;}
     height: 3vh;
 }
 
+.setting {transition: 1s;}
+
+.setting:hover {transform: rotate(90deg);}
+
+/* -- 2. Body Styling -- */
+
+.name {padding-top: .5vh;}
+
 .main{
     padding: 2%;
     background-color: #deddd9;
     border-radius: 40px;
     opacity: 90%;
+    width: 35ch;
     
     top: 50%;
     left: 50%;
     position: absolute;
     transform: translateX(-50%) translateY(-50%);
 
-    font-family: 'Nunito', sans-serif;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
+/* -- 3. Links Styling -- */
+
 .navItem{
-    margin: 20px auto 20px;
+    background-color: #ebebeb;
+    margin: 2vh auto 2vh;
     padding: 1em 8em 1em 8em;
     border-radius: 90px;
 }
 
 .navItem:hover {transform: scale(1.03, 1.05);}
 
-.navAni{
-    background-color: #F3E9E9;
-    transition: 0.2s;
-}
+.navAni {transition: 0.2s;}
 
-.setting{
-    width: 3vh;
-    height: 3vh;
-    transition: 1s;
-}
+a:link {color: #111;}
 
-.setting:hover {transform: rotate(90deg);}
+a:visited {color: #333;}
+
+/* -- 4. Modal Styling -- */
 
 .noModal {display: none;}
 
-.modal{
+#modal{
     top: 50%;
     left: 50%;
     position: absolute;
-    transform: translateX(-50%) translateY(-50%);
-
+    transform: translateX(-50%) translateY(-50%); 
+    
     width: max-content;
     height: max-content;
     border-radius: 40px;
+
+    height: 30ch;
+    width: 20vw;
     
+    padding: 1ch 1ch 1ch 1ch;
+    
+    cursor: auto;
     text-align: center;
     background-color: #999;
+}
+
+@media screen and (max-width: 930px) {
+    #modal{
+        width: clamp(20vw, 80vw, 90vw);
+    }
+}
+
+#grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    align-items: center;
+}
+
+.button{
+    border: none;
+    border-radius: 40px;
+    width: min(15ch, 20ch);
+    height: 6ch;
+    margin: 1ch;
 }
