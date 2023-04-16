@@ -40,8 +40,8 @@ function setup() {
     const linkList = [
         {
             "id" : "0",
-            "name": "twitch",
-            "href": "https://www.twitch.tv/windexconsumerism"
+            "name": "youtube",
+            "href": "https://www.youtube.com/@windexconsumer"
         },
         {
             "id" : "1",
